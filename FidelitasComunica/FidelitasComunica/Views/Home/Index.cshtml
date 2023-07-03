@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@model FidelitasComunica.Models.Usuario
+@{
+    var tipoError = ViewBag.TipoError;
+}
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -61,7 +68,23 @@
         </div>
     </div>
     <!-- Topbar End -->
-
+    @if (tipoError != null)
+    {
+        <div class="alert alert-danger">
+            @if (tipoError == 1)
+            {
+                <span>Error 1: El usuario no existe</span>
+            }
+            else if (tipoError == 2)
+            {
+                <span>Error 2: La contraseña es incorrecta</span>
+            }
+            else
+            {
+                <span>Error desconocido</span>
+            }
+        </div>
+    }
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
@@ -87,11 +110,11 @@
                                 <a href="destination.html" class="dropdown-item">Destination</a>
                                 <a href="guide.html" class="dropdown-item">Travel Guides</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="guide.html" class="dropdown-item">Iniciar Sesión</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        <a href="contact.html" class="nav-item nav-link">Iniciar Sesión</a>
+                        <a class="nav-item nav-link" >Contact</a>
+                        <a class="nav-item nav-link" data-toggle="modal" data-target="#exampleModalCenter"> Iniciar Sesión
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -99,6 +122,44 @@
     </div>
     <!-- Navbar End -->
 
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalTitle">Iniciar Sesion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="Index_admin" class="row">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="usuario">Usuario</label>
+                                <input asp-for="usuario" type="text" class="form-control" placeholder="Ingrese su usaurio" />
+                                <span asp-validation-for="usuario"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="contrasena">Contraseña</label>
+                                <input asp-for="contrasena" type="password" class="form-control" placeholder="Ingrese su Contraseña" />
+                                <span asp-validation-for="contrasena"></span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+                            <input type="submit" class="btn btn-primary" value="Login" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin login modal-->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
@@ -813,7 +874,7 @@
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">

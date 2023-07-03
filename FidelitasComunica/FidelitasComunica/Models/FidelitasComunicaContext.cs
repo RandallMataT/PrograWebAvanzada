@@ -9,6 +9,6 @@ namespace FidelitasComunica.Models
         {
         }
 
-        public DbSet<Usuario> Uusario { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }
