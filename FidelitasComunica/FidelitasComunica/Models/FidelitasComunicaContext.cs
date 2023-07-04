@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using FidelitasComunica.Models;
 
 namespace FidelitasComunica.Models
 {
@@ -10,5 +11,7 @@ namespace FidelitasComunica.Models
         }
 
         public DbSet<Usuario> Usuario { get; set; }
+
+        public DbSet<Paquete> Paquete { get; set; }
     }
 }
