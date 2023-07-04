@@ -10747,19 +10747,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Golcher\\.nuget\\packages\\": {}
+    "C:\\Users\\andre\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
       "projectName": "FidelitasComunica",
-      "projectPath": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
-      "packagesPath": "C:\\Users\\Golcher\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\obj\\",
+      "projectPath": "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Golcher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

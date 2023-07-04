@@ -12,6 +12,6 @@ namespace FidelitasComunica.Models
 
         public DbSet<Usuario> Usuario { get; set; }
 
-        public DbSet<FidelitasComunica.Models.Paquete>? Paquetes { get; set; }
+        public DbSet<Paquete> Paquete { get; set; }
     }
 }
