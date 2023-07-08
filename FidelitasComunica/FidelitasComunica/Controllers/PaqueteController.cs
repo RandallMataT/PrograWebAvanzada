@@ -116,6 +116,57 @@ namespace FidelitasComunica.Controllers
 
 
 
+        // Inicia eliminar
+
+        [HttpGet]
+        public async Task<IActionResult> Eliminar(int? ID)
+        {
+            if (ID == null)
+            {
+                ViewData["TipoError"] = 1;
+                return View();
+            }
+
+            var paquete = await _context.Paquete.FindAsync(ID);
+
+            if (paquete == null)
+            {
+                ViewData["TipoError"] = 2;
+                return View();
+            }
+
+            return View(paquete);
+        }
+
+        [HttpPost, ActionName("Eliminar")]
+        public async Task<IActionResult> ConfirmarEliminar(int? ID)
+        {
+            if (ID == null)
+            {
+                ViewData["TipoError"] = 1;
+                return View();
+            }
+
+            var paquete = await _context.Paquete.FindAsync(ID);
+
+            if (paquete == null)
+            {
+                ViewData["TipoError"] = 2;
+                return View();
+            }
+
+            try
+            {
+                _context.Paquete.Remove(paquete);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                ViewData["TipoError"] = 3;
+                return View(paquete);
+            }
+        }
 
 
 

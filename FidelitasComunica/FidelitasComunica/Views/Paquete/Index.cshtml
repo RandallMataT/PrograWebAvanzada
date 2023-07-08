@@ -1,9 +1,7 @@
 ﻿@model IEnumerable<FidelitasComunica.Models.Paquete>
 @{
-    ViewData["Title"] = "Lista de Paquetes de viajes";
+    ViewData["Title"] = "Paquetes de viajes";
 }
-
-<h1>Paquetes para viajes</h1>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,28 +37,24 @@
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
+                    <h1 class="m-0 text-primary"><span class="text-dark">Fidélitas </span>Comunica</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        @Html.ActionLink("Paquete", "Index", "Paquete", null, new { @class = "nav-item nav-link" })
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="package.html" class="nav-item nav-link active">Tour Packages</a>
+                        <a href="" class="nav-item nav-link active">Inicio</a>
+                        <a href="service.html" class="nav-item nav-link">Servicios ofrecidos</a>
+                        <a href="package.html" class="nav-item nav-link">Paquetes turísticos</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Más</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="guide.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="about.html" class="dropdown-item">Sobre nosotros</a>
+                                <a href="destination.html" class="dropdown-item">Destinos</a>
+                                <a href="guide.html" class="dropdown-item">Guías turísticos</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -71,11 +65,11 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Packages</h3>
+                <h3 class="display-4 text-white text-uppercase">Paquetes</h3>
                 <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Inicio</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Packages</p>
+                    <p class="m-0 text-uppercase">Paquetes</p>
                 </div>
             </div>
         </div>
@@ -91,41 +85,38 @@
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Destination</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
+                                        <option selected id="tipoPaquete">Tipo Paquete</option>
+                                        <option value="1">Paquete Plata</option>
+                                        <option value="2">Paquete Oro</option>
+                                        <option value="3">Paquete Diamante</option>
                                     </select>
                                 </div>
                             </div>
+
                             <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
+                            <div class="mb-3 mb-md-0">
+                                <select class="custom-select px-4" style="height: 47px;">
+                                        <option selected id="precio">Precio</option>
+                                    <option value="1">50.000 a 100.000</option>
+                                    <option value="2">100.001 - 150.000</option>
+                                    <option value="3">150.001 - más</option>
+                                </select>
                             </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
+                                        <option selected id="duracion>Duración</option>
+                                        <option value="1">1 a 3 días</option>
+                                        <option value="2">4 a 7 días</option>
+                                        <option value="3">8 a más días</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
+                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Buscar</button>
                     </div>
                 </div>
             </div>
@@ -133,6 +124,8 @@
     </div>
     <!-- Booking End -->
     <!-- Packages Start -->
+    <a asp-action="Crear">Nuevo Paquete</a>
+    <hr />
     @if (Model.Any())
     {
         <table class="table">
@@ -149,15 +142,6 @@
                     </th>
                     <th>
                         @Html.DisplayNameFor(model=> model.precio)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.fecha_inicio)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.fecha_fin)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model=> model.descripcion)
                     </th>
                     <th>
                         @Html.DisplayNameFor(model=> model.cantidad_personas)
@@ -184,15 +168,6 @@
                             @Html.DisplayFor(modelItem => item.precio)
                         </th>
                         <th>
-                            @Html.DisplayFor(modelItem => item.fecha_inicio)
-                        </th>
-                        <th>
-                            @Html.DisplayFor(modelItem => item.fecha_fin)
-                        </th>
-                        <th>
-                            @Html.DisplayFor(modelItem => item.descripcion)
-                        </th>
-                        <th>
                             @Html.DisplayFor(modelItem => item.cantidad_personas)
                         </th>
                         <th>
@@ -215,46 +190,15 @@
     }
     <!-- Destination Start -->
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <!--<div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="" class="navbar-brand">
-                    <h1 class="text-primary"><span class="text-white">TRAVEL</span>ER</h1>
+                    <h1 class="text-primary"><span class="text-white">Fidelitas </span>Comunica</h1>
                 </a>
-                <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
-                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
+
+              <div class="col-lg-3 col-md-6 mb-1" style="padding-left: 60px">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
@@ -264,23 +208,18 @@
                     <div class="input-group">
                         <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
                         <div class="input-group-append">
-                            <button class="btn btn-primary px-3">Sign Up</button>
+                                    <button class="btn btn-primary px-3">Sign Up</button> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="row">
+    </div> -->
+    <div class=" bg-dark text-white border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row" style="text-align:center">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white-50">
-                    Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.</a>
-                </p>
-            </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <p class="m-0 text-white-50">
-                    Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    Copyright &copy; Fidélitas Comunica 2023.
                 </p>
             </div>
         </div>
@@ -306,8 +245,57 @@
     <!-- Template Javascript -->
     <script src="~/ js/main.js"></script>
 
+    <script>
+        document.getElementById('buscarBtn').addEventListener('click', function() {
+    // Obtener los valores seleccionados en los elementos select
+    var tipoPaquete = document.getElementById('tipoPaquete').value;
+    var precio = document.getElementById('precio').value;
+    var duracion = document.getElementById('duracion').value;
 
+    // Filtrar los datos según los valores seleccionados
+    var datosFiltrados = @Json.Serialize(Model)
+    .filter(function(paquete) {
+    var filtroTipoPaquete = tipoPaquete === 'Tipo Paquete' || paquete.tipo === tipoPaquete;
+    var filtroPrecio = precio === 'Precio' || precio === '150.001 - más' && paquete.precio > 150000 || precio === '100.001 - 150.000' && paquete.precio > 100000 && paquete.precio <= 150000 || precio === '50.000 a 100.000' && paquete.precio >= 50000 && paquete.precio <= 100000;
+    var filtroDuracion = duracion === 'Duración' || duracion === '8 a más días' && paquete.duracion_dias >= 8 || duracion === '4 a 7 días' && paquete.duracion_dias >= 4 && paquete.duracion_dias <= 7 || duracion === '1 a 3 días' && paquete.duracion_dias >= 1 && paquete.duracion_dias <= 3;
 
+    return filtroTipoPaquete && filtroPrecio && filtroDuracion;
+    });
+
+    // Generar la tabla con los datos filtrados
+    generarTabla(datosFiltrados);
+    });
+
+    function generarTabla(datos) {
+    var tabla = document.getElementById('tablaPaquetes');
+    tabla.innerHTML = ''; // Limpiar la tabla existente
+
+    // Generar las filas y columnas de la tabla con los datos filtrados
+    datos.forEach(function(paquete) {
+    var row = tabla.insertRow();
+
+    var nombreCell = row.insertCell();
+    nombreCell.innerHTML = paquete.nombre;
+
+    var destinoCell = row.insertCell();
+    destinoCell.innerHTML = paquete.destino;
+
+    var duracionCell = row.insertCell();
+    duracionCell.innerHTML = paquete.duracion_dias;
+
+    var precioCell = row.insertCell();
+    precioCell.innerHTML = paquete.precio;
+
+    var cantidadPersonasCell = row.insertCell();
+    cantidadPersonasCell.innerHTML = paquete.cantidad_personas;
+
+    var accionesCell = row.insertCell();
+    accionesCell.innerHTML = '
+    <a href="#" class="btn btn-primary">Editar</a>'; // Agrega aquí los enlaces a las acciones que desees
+    });
+    }
+
+    </script>
 
  
 
