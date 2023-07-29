@@ -17,6 +17,11 @@ namespace FidelitasComunica.Controllers
             return View(await _context.Paquete.ToListAsync());
         }
 
+        public async Task<IActionResult> IndexCliente()
+        {
+            return View(await _context.Paquete.ToListAsync());
+        }
+
         //Aqui inicia el crear
         [HttpGet]
         public IActionResult Crear()
@@ -114,6 +119,24 @@ namespace FidelitasComunica.Controllers
             return View(paquete);
         }
 
+        public async Task<IActionResult> DetallesCliente(int? ID)
+        {
+            if (ID == null)
+            {
+                ViewData["TipoError"] = 1;
+                return View();
+            }
+
+            var paquete = await _context.Paquete.FindAsync(ID);
+
+            if (paquete == null)
+            {
+                ViewData["TipoError"] = 2;
+                return View();
+            }
+
+            return View(paquete);
+        }
 
 
         // Inicia eliminar

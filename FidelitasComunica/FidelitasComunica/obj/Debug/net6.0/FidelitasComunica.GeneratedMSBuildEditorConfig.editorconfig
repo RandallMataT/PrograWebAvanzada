@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZVxEZXRhbGxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/andre/Documentos/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Paquete/DetallesCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZVxEZXRhbGxlc0NsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/andre/Documentos/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Paquete/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,12 +48,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZVxFbGltaW5hci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Documentos/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Paquete/Index - Copia.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZVxJbmRleCAtIENvcGlhLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/andre/Documentos/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Paquete/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/andre/Documentos/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Paquete/IndexCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZVxJbmRleENsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/andre/Documentos/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Shared/Error.cshtml]
