@@ -13,7 +13,7 @@ values('admin','pass');
 
 select * from Usuario;
  
-/paquetes_Viaje/
+/*paquetes_Viaje*/
 CREATE TABLE Paquete (
     ID INT IDENTITY (1,1) PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -32,3 +32,26 @@ VALUES ('Paquete A', 'Destino A', 7, 1500.00, CONVERT(DATE, '01-08-2023', 105), 
 select * from paquetes_Viaje;
 
 DROP TABLE paquetes_Viaje
+
+
+/*Destino Turistico*/
+CREATE TABLE Destino (
+    ID INT IDENTITY(1, 1) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    pais VARCHAR(100) NOT NULL,
+    ciudad VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(500) NOT NULL,
+    clima VARCHAR(50) NOT NULL,
+    atracciones VARCHAR(500) NOT NULL,
+    idioma_principal VARCHAR(50) NOT NULL,
+    moneda VARCHAR(50) NOT NULL
+);
+
+INSERT INTO Destino (nombre, pais, ciudad, descripcion, clima, atracciones, idioma_principal, moneda)
+VALUES
+    ('Playa del Carmen', 'México', 'Quintana Roo', 'Playa del Carmen es un famoso destino turístico en la Riviera Maya, conocido por sus hermosas playas de arena blanca y aguas cristalinas.', 'Tropical', 'Playas de arena blanca, Parque temático Xcaret, Ruinas mayas de Tulum', 'Español', 'Peso mexicano'),
+    ('Tokio', 'Japón', 'Tokio', 'Tokio es una metrópolis vibrante que combina la modernidad con la tradición japonesa. Es famoso por su tecnología de vanguardia y su cultura única.', 'Templado', 'Torre Tokyo Skytree, Templo Senso-ji, Barrio de Shibuya', 'Japonés', 'Yen japonés'),
+    ('París', 'Francia', 'París', 'París es la ciudad del amor y la luz, famosa por sus icónicos monumentos, su arte y su gastronomía.', 'Templado', 'Torre Eiffel, Museo del Louvre, Catedral de Notre-Dame', 'Francés', 'Euro'),
+    ('Sídney', 'Australia', 'Sídney', 'Sídney es una ciudad costera llena de vida, conocida por su icónica Ópera de Sídney y sus playas impresionantes.', 'Templado', 'Ópera de Sídney, Bondi Beach, Puente de la Bahía de Sídney', 'Inglés', 'Dólar australiano');
+
+Select * from Destino;
