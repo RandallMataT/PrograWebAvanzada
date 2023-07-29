@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Golcher\Documents\GitHub\PrograWebAvanzada\FidelitasComunica\FidelitasComunica
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Golcher/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Golcher/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/Detalles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xEZXRhbGxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Golcher/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
