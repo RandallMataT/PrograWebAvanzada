@@ -91,20 +91,19 @@
     <!-- Packages Start -->
     <div class="container mt-5">
         <div class="row">
-            @foreach (var destino in Model)  
+            @foreach (var destino in Model)
             {
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <!-- Cambiar imagen luego! -->
-                        <img class="img-fluid" src="img/paquete.jpg" alt="">
+                        <img class="img-fluid" src="@destino.imagen" alt="Imagen de @destino.nombre">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>@destino.ciudad, @destino.pais</small>
                             </div>
                             <a class="h5 text-decoration-none" href="">@destino.nombre</a>
-                            
+
                             <p>@destino.descripcion</p>
-                            
+
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <a asp-action="DetallesCliente" asp-route-ID="@destino.ID">Detalles</a>  <i class="fa fa-arrow-right btn-icon-append"></i>
@@ -117,6 +116,7 @@
             }
         </div>
     </div>
+
 
     <!-- Footer End -->
     <!-- Back to Top -->

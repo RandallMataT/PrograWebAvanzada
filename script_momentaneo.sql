@@ -44,14 +44,15 @@ CREATE TABLE Destino (
     clima VARCHAR(50) NOT NULL,
     atracciones VARCHAR(500) NOT NULL,
     idioma_principal VARCHAR(50) NOT NULL,
-    moneda VARCHAR(50) NOT NULL
+    moneda VARCHAR(50) NOT NULL,
+	imagen VARCHAR(200) NOT NULL
 );
 
-INSERT INTO Destino (nombre, pais, ciudad, descripcion, clima, atracciones, idioma_principal, moneda)
+INSERT INTO Destino (nombre, pais, ciudad, descripcion, clima, atracciones, idioma_principal, moneda, imagen)
 VALUES
-    ('Playa del Carmen', 'México', 'Quintana Roo', 'Playa del Carmen es un famoso destino turístico en la Riviera Maya, conocido por sus hermosas playas de arena blanca y aguas cristalinas.', 'Tropical', 'Playas de arena blanca, Parque temático Xcaret, Ruinas mayas de Tulum', 'Español', 'Peso mexicano'),
-    ('Tokio', 'Japón', 'Tokio', 'Tokio es una metrópolis vibrante que combina la modernidad con la tradición japonesa. Es famoso por su tecnología de vanguardia y su cultura única.', 'Templado', 'Torre Tokyo Skytree, Templo Senso-ji, Barrio de Shibuya', 'Japonés', 'Yen japonés'),
-    ('París', 'Francia', 'París', 'París es la ciudad del amor y la luz, famosa por sus icónicos monumentos, su arte y su gastronomía.', 'Templado', 'Torre Eiffel, Museo del Louvre, Catedral de Notre-Dame', 'Francés', 'Euro'),
-    ('Sídney', 'Australia', 'Sídney', 'Sídney es una ciudad costera llena de vida, conocida por su icónica Ópera de Sídney y sus playas impresionantes.', 'Templado', 'Ópera de Sídney, Bondi Beach, Puente de la Bahía de Sídney', 'Inglés', 'Dólar australiano');
+    ('Playa del Carmen', 'México', 'Quintana Roo', 'Playa del Carmen es un famoso destino turístico en la Riviera Maya, conocido por sus hermosas playas de arena blanca y aguas cristalinas.', 'Tropical', 'Playas de arena blanca, Parque temático Xcaret, Ruinas mayas de Tulum', 'Español', 'Peso mexicano', 'https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_700,q_75,w_1200/v1/clients/quintanaroo/RIVIERA_MAYA_PLAYA_MAROMA_675f6ce8-8cfa-43f7-89d0-7f86945f2f08.jpg'),
+    ('Tokio', 'Japón', 'Tokio', 'Tokio es una metrópolis vibrante que combina la modernidad con la tradición japonesa. Es famoso por su tecnología de vanguardia y su cultura única.', 'Templado', 'Torre Tokyo Skytree, Templo Senso-ji, Barrio de Shibuya', 'Japonés', 'Yen japonés', 'https://media.admagazine.com/photos/618a5ef1be961b98e9f09804/master/w_1600%2Cc_limit/91686.jpg'),
+    ('París', 'Francia', 'París', 'París es la ciudad del amor y la luz, famosa por sus icónicos monumentos, su arte y su gastronomía.', 'Templado', 'Torre Eiffel, Museo del Louvre, Catedral de Notre-Dame', 'Francés', 'Euro', 'https://viajes.nationalgeographic.com.es/medio/2022/07/13/paris_37bc088a_1280x720.jpg'),
+    ('Sídney', 'Australia', 'Sídney', 'Sídney es una ciudad costera llena de vida, conocida por su icónica Ópera de Sídney y sus playas impresionantes.', 'Templado', 'Ópera de Sídney, Bondi Beach, Puente de la Bahía de Sídney', 'Inglés', 'Dólar australiano', 'https://fotografias.lasexta.com/clipping/cmsimages01/2021/07/13/AAAC5987-6C8D-48D1-9D24-F601EF1B89FA/98.jpg?crop=1920,1080,x0,y102&width=1900&height=1069&optimize=high&format=webply');
 
 Select * from Destino;
