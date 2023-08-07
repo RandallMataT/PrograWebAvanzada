@@ -60,19 +60,19 @@ namespace FidelitasComunica.Controllers
                 return View();
             }
 
-            var paquete = await _context.Paquete.FindAsync(ID);
+            var reservacion = await _context.ReservacionDestino.FindAsync(ID);
 
-            if (paquete == null)
+            if (reservacion == null)
             {
                 ViewData["TipoError"] = 2;
                 return View();
             }
 
-            return View(paquete);
+            return View(reservacion);
         }
 
         [HttpPost, ActionName("Eliminar")]
-        public async Task<IActionResult> CondirmarEliminar(int? ID)
+        public async Task<IActionResult> ConfrimarEliminar(int? ID)
         {
             if (ID == null)
             {

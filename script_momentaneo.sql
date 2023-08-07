@@ -82,3 +82,6 @@ CREATE TABLE ReservacionPaquete (
 );
 
 Select * from ReservacionPaquete;
+
+insert into ReservacionPaquete(nombre,apellidos,correo,nombre_paquete)
+values ('jose pablo','duran','prueba@gmail.com','Paquete A');

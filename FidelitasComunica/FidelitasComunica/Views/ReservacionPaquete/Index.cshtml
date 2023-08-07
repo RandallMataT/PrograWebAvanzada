@@ -1,4 +1,4 @@
-﻿@model FidelitasComunica.Models.ReservacionDestino
+﻿@model IEnumerable<FidelitasComunica.Models.ReservacionPaquete>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,38 +93,29 @@
     </div>
     <!-- Navbar End -->
     <!-- Team Start -->
-    <h3>¿Desea cancelar el siguiente paquete?</h3>
-    <hr />
-    <form asp-action="Eliminar" class="row">
-        <div class="col-md-6 col-sm-12 form-group">
-            <label style="color:black; font-size:18px" asp-for="nombre_destino"></label>
-            <dd class="col-sm-8">@Model.nombre_destino</dd>
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h1>Reservaciones de Paquetes Turísticos</h1>
+            </div>
+            <div class="row">
+                @foreach (var reservacion in Model)
+                {
+                    <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                        <div class="team-item bg-white mb-4">
+                            <div class="text-center py-4">
+                                <h5 class="text-truncate">@reservacion.nombre_paquete</h5>
+                                <p class="m-0">Nombre: @reservacion.nombre</p>
+                                <p class="m-0">Apellidos: @reservacion.apellidos</p>
+                                <p class="m-0">Correo: @reservacion.correo</p>
+                                <a style="color:red" asp-action="Eliminar" asp-route-ID="@reservacion.ID">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
-
-        <div class="col-md-6 col-sm-12 form-group">
-            <label style="color:black; font-size:18px" asp-for="nombre"></label>
-            <dd class="col-sm-8">@Model.nombre</dd>
-        </div>
-
-        <div class="col-md-6 col-sm-12 form-group">
-            <label style="color:black; font-size:18px" asp-for="apellidos"></label>
-            <dd class="col-sm-8">@Model.apellidos</dd>
-        </div>
-
-        <div class="col-md-6 col-sm-12 form-group">
-            <label style="color:black; font-size:18px" asp-for="correo"></label>
-            <dd class="col-sm-8">@Model.correo</dd>
-        </div>
-
-        <div class="pt-4 form-group">
-            <input asp-for="ID" type="hidden" />
-            <input type="submit" value="Eliminar" class="btn btn-success" />
-        </div>
-
-    </form>
-
-    <br />
-    <a asp-action="Index">Volver</a>
+    </div>
     <!-- Team End -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">

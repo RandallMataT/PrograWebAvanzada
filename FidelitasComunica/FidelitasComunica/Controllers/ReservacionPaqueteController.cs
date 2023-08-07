@@ -1,6 +1,7 @@
 ﻿using FidelitasComunica.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace FidelitasComunica.Controllers
 {
@@ -11,9 +12,9 @@ namespace FidelitasComunica.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _context.ReservacionPaquete.ToListAsync());
         }
 
         [HttpGet]
@@ -48,5 +49,54 @@ namespace FidelitasComunica.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Eliminar(int? ID)
+        {
+            if (ID == null)
+            {
+                ViewData["TipoError"] = 1;
+                return View();
+            }
+
+            var reservacion = await _context.ReservacionPaquete.FindAsync(ID);
+
+            if (reservacion == null)
+            {
+                ViewData["TipoError"] = 2;
+                return View();
+            }
+
+            return View(reservacion);
+        }
+
+        [HttpPost, ActionName("Eliminar")]
+        public async Task<IActionResult> ConfirmarEliminar(int? ID)
+        {
+            if (ID == null)
+            {
+                ViewData["TipoError"] = 1;
+                return View();
+            }
+
+            var reservacion = await _context.ReservacionPaquete.FindAsync(ID);
+
+            if (reservacion == null)
+            {
+                ViewData["TipoError"] = 2;
+                return View();
+            }
+
+            try
+            {
+                _context.ReservacionPaquete.Remove(reservacion);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                ViewData["TipoError"] = 3;
+                return View();
+            }
+        }
     }
 }
