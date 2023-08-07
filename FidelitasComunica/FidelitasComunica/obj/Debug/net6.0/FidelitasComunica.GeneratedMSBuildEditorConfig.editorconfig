@@ -24,8 +24,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xEZXRhbGxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/toted/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/DetallesCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xEZXRhbGxlc0NsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toted/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toted/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xFbGltaW5hci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/toted/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toted/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Destino/IndexCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub1xJbmRleENsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/toted/Documents/GitHub/PrograWebAvanzada/FidelitasComunica/FidelitasComunica/Views/Home/Index.cshtml]

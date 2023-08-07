@@ -39,5 +39,8 @@ namespace FidelitasComunica.Models
         [Required]
         [DisplayName("Moneda")]
         public string moneda { get; set; }
+
+        [DisplayName("Imagen")]
+        public string imagen { get; set; }
     }
 }
