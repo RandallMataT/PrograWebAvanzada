@@ -15,5 +15,7 @@ namespace FidelitasComunica.Models
         public DbSet<Paquete> Paquete { get; set; }
 
         public DbSet<Destino> Destino { get; set; }
+
+        public DbSet<ReservacionPaquete> ReservacionPaquete { get; set; }
     }
 }

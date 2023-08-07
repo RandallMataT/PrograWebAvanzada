@@ -30,7 +30,7 @@ namespace FidelitasComunica.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Crear(Paquete paquete)
+        public async Task<IActionResult> Create(Paquete paquete)
         {
             try
             {
