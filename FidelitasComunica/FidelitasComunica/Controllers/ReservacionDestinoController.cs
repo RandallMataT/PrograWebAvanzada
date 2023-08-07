@@ -1,6 +1,7 @@
 ﻿using FidelitasComunica.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace FidelitasComunica.Controllers
@@ -12,9 +13,9 @@ namespace FidelitasComunica.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _context.ReservacionDestino.ToListAsync());
         }
 
 
@@ -47,6 +48,56 @@ namespace FidelitasComunica.Controllers
             catch
             {
                 return View(reservacion);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Eliminar(int? ID)
+        {
+            if (ID == null)
+            {
+                ViewData["TipoError"] = 1;
+                return View();
+            }
+
+            var paquete = await _context.Paquete.FindAsync(ID);
+
+            if (paquete == null)
+            {
+                ViewData["TipoError"] = 2;
+                return View();
+            }
+
+            return View(paquete);
+        }
+
+        [HttpPost, ActionName("Eliminar")]
+        public async Task<IActionResult> CondirmarEliminar(int? ID)
+        {
+            if (ID == null)
+            {
+                ViewData["TipoError"] = 1;
+                return View();
+            }
+
+            var reservacion = await _context.ReservacionDestino.FindAsync(ID);
+
+            if (reservacion == null)
+            {
+                ViewData["TipoError"] = 2;
+                return View();
+            }
+
+            try
+            {
+                _context.ReservacionDestino.Remove(reservacion);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                ViewData["TipoError"] = 3;
+                return View();
             }
         }
     }

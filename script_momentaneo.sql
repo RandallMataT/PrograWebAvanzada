@@ -66,7 +66,11 @@ CREATE TABLE ReservacionDestino (
 	nombre_destino VARCHAR(100) NULL
 );
 
+
 Select * from ReservacionDestino;
+
+insert into ReservacionDestino(nombre,apellidos,correo,nombre_destino)
+values ('jose pablo','duran','prueba@gmail.com','Tokio');
 
 
 CREATE TABLE ReservacionPaquete (
