@@ -56,3 +56,13 @@ VALUES
     ('Sídney', 'Australia', 'Sídney', 'Sídney es una ciudad costera llena de vida, conocida por su icónica Ópera de Sídney y sus playas impresionantes.', 'Templado', 'Ópera de Sídney, Bondi Beach, Puente de la Bahía de Sídney', 'Inglés', 'Dólar australiano', 'https://fotografias.lasexta.com/clipping/cmsimages01/2021/07/13/AAAC5987-6C8D-48D1-9D24-F601EF1B89FA/98.jpg?crop=1920,1080,x0,y102&width=1900&height=1069&optimize=high&format=webply');
 
 Select * from Destino;
+
+/*Destino Turistico*/
+CREATE TABLE ResrvacionDestino (
+    ID INT IDENTITY(1, 1) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
+	ID_DESTINO int null,
+	nombre_destino VARCHAR(100) NULL
+);
