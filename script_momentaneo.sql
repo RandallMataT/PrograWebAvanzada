@@ -58,11 +58,23 @@ VALUES
 Select * from Destino;
 
 /*Destino Turistico*/
-CREATE TABLE ResrvacionDestino (
+CREATE TABLE ReservacionDestino (
     ID INT IDENTITY(1, 1) PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
-	ID_DESTINO int null,
 	nombre_destino VARCHAR(100) NULL
 );
+
+Select * from ReservacionDestino;
+
+
+CREATE TABLE ReservacionPaquete (
+    ID INT IDENTITY(1, 1) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
+	nombre_paquete VARCHAR(100) NULL
+);
+
+Select * from ReservacionPaquete;

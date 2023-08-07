@@ -1,5 +1,6 @@
 ﻿using FidelitasComunica.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace FidelitasComunica.Controllers
@@ -19,6 +20,8 @@ namespace FidelitasComunica.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            var paquetes = _context.Paquete.ToList();
+            ViewBag.Paquetes = new SelectList(paquetes, "nombre", "nombre");
             return View();
         }
 

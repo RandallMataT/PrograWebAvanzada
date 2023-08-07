@@ -19,11 +19,11 @@ namespace FidelitasComunica.Controllers
 
 
         [HttpGet]
-        public IActionResult Create(int? ID)
+        public IActionResult Create()
         {
-            Destino destino = _context.Destino.Where(x => x.ID == ID).FirstOrDefault();
-            ViewBag.ID_DESTINO = new SelectList("ID_DESTINO", "Nombre Destino", destino.nombre);
-            return View(destino);
+            var destinos = _context.Destino.ToList();
+            ViewBag.Destinos = new SelectList(destinos, "nombre", "nombre");
+            return View();
         }
 
         [HttpPost]

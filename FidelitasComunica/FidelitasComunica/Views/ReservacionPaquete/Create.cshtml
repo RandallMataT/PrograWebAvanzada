@@ -1,4 +1,4 @@
-﻿@model FidelitasComunica.Models.ReservacionDestino
+﻿@model FidelitasComunica.Models.ReservacionPaquete
 @{
     ViewData["Title"] = "Paquetes de viajes";
 }
@@ -97,11 +97,14 @@
             <span asp-validation-for="correo"></span>
         </div>
 
-        <div class="form-group">
-            <label asp-for="nombre_destino">Cliente</label>
-            <select asp-for="nombre_destino" asp-items="@ViewBag.ID_DESTINO" class="form-control"></select>
-            <span asp-validation-for="nombre_destino" class="text-danger"></span>
+        <div class="col-md-6 col-sm-12 form-group">
+            <label asp-for="nombre_paquete"></label>
+            <select asp-for="nombre_paquete" asp-items="@ViewBag.Paquetes" class="form-control">
+                <option value="">Selecciona un destino</option>
+            </select>
+            <span asp-validation-for="nombre_paquete"></span>
         </div>
+
 
         <div class="pt-4 form-group">
             <input type="submit" value="Crear" class="btn btn-success" />
