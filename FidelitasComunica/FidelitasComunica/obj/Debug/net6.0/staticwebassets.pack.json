@@ -21,6 +21,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\wwwroot\\img\\DestinosTuristicos.jpg",
+      "PackagePath": "staticwebassets\\img\\DestinosTuristicos.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\wwwroot\\img\\PaquetesTuristicos.png",
+      "PackagePath": "staticwebassets\\img\\PaquetesTuristicos.png"
+    },
+    {
+      "Id": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\wwwroot\\img\\ReservaDestino.jpg",
+      "PackagePath": "staticwebassets\\img\\ReservaDestino.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\wwwroot\\img\\ReservaPaquete.jpg",
+      "PackagePath": "staticwebassets\\img\\ReservaPaquete.jpg"
+    },
+    {
       "Id": "C:\\Users\\Golcher\\Documents\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\wwwroot\\img\\about-1.jpg",
       "PackagePath": "staticwebassets\\img\\about-1.jpg"
     },

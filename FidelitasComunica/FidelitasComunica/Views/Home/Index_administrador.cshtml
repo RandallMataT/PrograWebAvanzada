@@ -1,6 +1,6 @@
-﻿@{
+﻿@model IEnumerable<FidelitasComunica.Models.Destino>
+@{
     ViewData["Title"] = "Destinos de viaje";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <!DOCTYPE html>
@@ -49,11 +49,11 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Nuestros Servicios</h3>
+                <h3 class="display-4 text-white text-uppercase">Destinos</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Inicio</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Nuestros Servicios</p>
+                    <p class="m-0 text-uppercase">Destinos</p>
                 </div>
             </div>
         </div>
@@ -62,65 +62,45 @@
     <!-- Text Section Start -->
     <div class="container-fluid booking mt-5 pb-5">
         <div class="container pb-5">
-            
+            <div class="bg-light shadow" style="padding: 30px;">
+                <div class="row align-items-center" style="min-height: 60px;">
+                    <div class="col-md-12">
+                        <p class="text-center m-0 text-dark">Aquí encontrarás los mejores destinos turísticos       ¡Viaja a donde siempre has querido!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Text Section End -->
-
-
     <!-- Packages Start -->
     <div class="container">
-
-        <!-- Tarjetas de Servicios -->
         <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="~/img/DestinosTuristicos.jpg" class="card-img-top" alt="Destinos Turísticos">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="@Url.Action("Index", "Destino")" class="text-dark">Destinos Turísticos</a></h5>
-                        <p class="card-text">Explora una amplia variedad de destinos turísticos fascinantes que te llevarán a aventuras inolvidables. Desde playas paradisíacas hasta ciudades vibrantes, nuestros destinos te esperan con experiencias únicas y emocionantes.</p>
+            @foreach (var destino in Model)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="@destino.imagen" alt="Imagen de @destino.nombre">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>@destino.ciudad, @destino.pais</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">@destino.nombre</a>
+
+                            <p>@destino.descripcion</p>
+
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <a asp-action="DetallesCliente" asp-route-ID="@destino.ID">Detalles</a>  <i class="fa fa-arrow-right btn-icon-append"></i>
+                                    <h5 class="m-0">Pais: @destino.pais</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="~/img/PaquetesTuristicos.png" class="card-img-top" alt="Paquetes Turísticos">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="@Url.Action("Index", "Paquete")" class="text-dark">Paquetes Turísticos</a></h5>
-                        <p class="card-text">Descubre emocionantes paquetes turísticos diseñados para ofrecerte experiencias completas y sin preocupaciones. Nuestros paquetes incluyen alojamiento de calidad, itinerarios emocionantes y actividades imperdibles.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="~/img/ReservaDestino.jpg" class="card-img-top" alt="Reserva Destinos Turístico">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="@Url.Action("Index", "ReservacionDestino")" class="text-dark">Reservación Destinos Turísticos</a></h5>
-                        <p class="card-text">Haz realidad tus sueños de viaje reservando destinos turísticos de ensueño. Nuestra plataforma de reserva te permite explorar una variedad de opciones. Con acceso a las mejores tarifas y destinos turísticos.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="~/img/ReservaPaquete.jpg" class="card-img-top" alt="Reserva Paquetes Turístico">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="@Url.Action("Index", "ReservacionPaquete")" class="text-dark">Reservación Paquetes Turísticos</a></h5>
-                        <p class="card-text">Encuentra y reserva paquetes turísticos personalizados que te brindarán experiencias inolvidables. Nuestra plataforma de reserva te ofrece una amplia gama de opciones, desde escapadas de fin de semana hasta aventuras de larga duración.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Agrega más tarjetas de servicios aquí -->
-
+            }
         </div>
     </div>
 
-    <br>
-    <br>
-    <!-- Packages End -->
 
     <!-- Footer End -->
     <!-- Back to Top -->
