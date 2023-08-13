@@ -95,7 +95,7 @@
                             <p>Fecha de fin: @Model.fecha_fin.ToString("dd/MM/yyyy")</p>
                             <p>Cantidad de personas: @Model.cantidad_personas</p>
                             <p>Descripción: @Model.descripcion</p>
-                            <button type="button" class="btn btn-primary">Reservar</button>
+                            <a class="btn btn-primary" asp-action="Create" asp-controller="ReservacionPaquete">Reservar</a>
                         </div>
                     </div>
                     <!-- Blog Detail End -->

@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace FidelitasComunica.Controllers
 {
@@ -17,7 +16,6 @@ namespace FidelitasComunica.Controllers
         {
             return View(await _context.ReservacionDestino.ToListAsync());
         }
-
 
         [HttpGet]
         public IActionResult Create()
@@ -45,7 +43,7 @@ namespace FidelitasComunica.Controllers
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
                 return View(reservacion);
             }
