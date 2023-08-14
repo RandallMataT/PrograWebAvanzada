@@ -81,6 +81,8 @@ CREATE TABLE ReservacionPaquete (
 	nombre_paquete VARCHAR(100) NULL
 );
 
+
+
 Select * from ReservacionPaquete;
 
 insert into ReservacionPaquete(nombre,apellidos,correo,nombre_paquete)
