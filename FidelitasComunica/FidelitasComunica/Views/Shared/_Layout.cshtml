@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,9 +35,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ReservacionPaquete" asp-action="Index">Reservación Paquetes Turísticos</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="privacy">Administrador</a>
+                        <li>
+                            <a class="nav-item nav-link" data-toggle="modal" data-target="#exampleModalCenter">
+                                Iniciar Sesión
+                            </a>
                         </li>
 
                     </ul>
@@ -51,9 +52,10 @@
         </main>
     </div>
 
+
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - FidelitasComunica - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - FidelitasComunica - <a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

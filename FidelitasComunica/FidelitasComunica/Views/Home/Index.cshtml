@@ -28,6 +28,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -61,6 +62,9 @@
             </div>
         </div>
     </div>
+    <br />
+    <br/>
+    <br />
     <!-- Topbar End -->
     @if (tipoError != null)
     {
@@ -80,39 +84,6 @@
         </div>
     }
 
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-primary"><span class="text-dark">Fidélitas </span>Comunica</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="" class="nav-item nav-link active">Inicio</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios ofrecidos</a>
-                        <a href="package.html" class="nav-item nav-link">Paquetes turísticos</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Más</a>
-                            <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="about.html" class="dropdown-item">Sobre nosotros</a>
-                                <a href="destination.html" class="dropdown-item">Destinos</a>
-                                <a href="guide.html" class="dropdown-item">Guías turísticos</a>
-                            </div>
-                        </div>
-                        <a class="nav-item nav-link" data-toggle="modal" data-target="#exampleModalCenter"> Iniciar Sesión
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
-
-
     <!-- Modal Login -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -129,7 +100,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label asp-for="usuario">Usuario</label>
-                                <input asp-for="usuario" type="text" class="form-control" placeholder="Ingrese su usaurio" />
+                                <input asp-for="usuario" type="text" class="form-control" placeholder="Ingrese su Usuario" />
                                 <span asp-validation-for="usuario"></span>
                             </div>
                         </div>

@@ -29,10 +29,7 @@ CREATE TABLE Paquete (
 INSERT INTO Paquete (nombre, destino, duracion_dias, precio, fecha_inicio, fecha_fin, descripcion, cantidad_personas)
 VALUES ('Paquete A', 'Destino A', 7, 1500.00, CONVERT(DATE, '01-08-2023', 105), CONVERT(DATE, '07-08-2023', 105), 'Descripción del paquete A', 2);
 
-select * from paquetes_Viaje;
-
-DROP TABLE paquetes_Viaje
-
+select * from Paquete;
 
 /*Destino Turistico*/
 CREATE TABLE Destino (

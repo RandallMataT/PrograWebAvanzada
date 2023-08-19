@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<FidelitasComunica.Models.Destino>
 @{
+    Layout = "_LayoutAdmin";
     ViewData["Title"] = "Destinos de viajes";
 }
 
@@ -61,54 +62,7 @@
         </div>
     </div>
     <!-- Header End -->
-    <!-- Booking Start  No funciona, lo dejo por si alguien quiere arreglarlo junto con el Script de abajo
-    <div class="container-fluid booking mt-5 pb-5">
-        <div class="container pb-5">
-            <div class="bg-light shadow" style="padding: 30px;">
-                <div class="row align-items-center" style="min-height: 60px;">
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected id="tipoPaquete">Tipo Paquete</option>
-                                        <option value="1">Paquete Plata</option>
-                                        <option value="2">Paquete Oro</option>
-                                        <option value="3">Paquete Diamante</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected id="precio">Precio</option>
-                                    <option value="1">50.000 a 100.000</option>
-                                    <option value="2">100.001 - 150.000</option>
-                                    <option value="3">150.001 - más</option>
-                                </select>
-                            </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected id="duracion>Duración</option>
-                                        <option value="1">1 a 3 días</option>
-                                        <option value="2">4 a 7 días</option>
-                                        <option value="3">8 a más días</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Buscar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     Booking End -->
+   
     <!-- Packages Start -->
     <!-- Text Section Start -->
     <div class="container-fluid booking mt-5 pb-5">
@@ -227,60 +181,6 @@
 
     <!-- Template Javascript -->
     <script src="~/ js/main.js"></script>
-
-    <!-- No funciona, lo dejo por si alguien quiere arreglarlo, ya no pude más jaja
-        <script>
-            document.getElementById('buscarBtn').addEventListener('click', function() {
-        // Obtener los valores seleccionados en los elementos select
-        var tipoPaquete = document.getElementById('tipoPaquete').value;
-        var precio = document.getElementById('precio').value;
-        var duracion = document.getElementById('duracion').value;
-
-        // Filtrar los datos según los valores seleccionados
-        var datosFiltrados = @Json.Serialize(Model)
-        .filter(function(paquete) {
-        var filtroTipoPaquete = tipoPaquete === 'Tipo Paquete' || paquete.tipo === tipoPaquete;
-        var filtroPrecio = precio === 'Precio' || precio === '150.001 - más' && paquete.precio > 150000 || precio === '100.001 - 150.000' && paquete.precio > 100000 && paquete.precio <= 150000 || precio === '50.000 a 100.000' && paquete.precio >= 50000 && paquete.precio <= 100000;
-        var filtroDuracion = duracion === 'Duración' || duracion === '8 a más días' && paquete.duracion_dias >= 8 || duracion === '4 a 7 días' && paquete.duracion_dias >= 4 && paquete.duracion_dias <= 7 || duracion === '1 a 3 días' && paquete.duracion_dias >= 1 && paquete.duracion_dias <= 3;
-
-        return filtroTipoPaquete && filtroPrecio && filtroDuracion;
-        });
-
-        // Generar la tabla con los datos filtrados
-        generarTabla(datosFiltrados);
-        });
-
-        function generarTabla(datos) {
-        var tabla = document.getElementById('tablaPaquetes');
-        tabla.innerHTML = ''; // Limpiar la tabla existente
-
-        // Generar las filas y columnas de la tabla con los datos filtrados
-        datos.forEach(function(paquete) {
-        var row = tabla.insertRow();
-
-        var nombreCell = row.insertCell();
-        nombreCell.innerHTML = paquete.nombre;
-
-        var destinoCell = row.insertCell();
-        destinoCell.innerHTML = paquete.destino;
-
-        var duracionCell = row.insertCell();
-        duracionCell.innerHTML = paquete.duracion_dias;
-
-        var precioCell = row.insertCell();
-        precioCell.innerHTML = paquete.precio;
-
-        var cantidadPersonasCell = row.insertCell();
-        cantidadPersonasCell.innerHTML = paquete.cantidad_personas;
-
-        var accionesCell = row.insertCell();
-        accionesCell.innerHTML = '
-        <a href="#" class="btn btn-primary">Editar</a>'; // Agrega aquí los enlaces a las acciones que desees
-        });
-        }
-
-            </script>-->
-
 
 
 </body>
