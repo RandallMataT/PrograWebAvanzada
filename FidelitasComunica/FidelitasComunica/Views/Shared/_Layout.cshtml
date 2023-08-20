@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FidelitasComunica.styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -53,9 +54,59 @@
     </div>
 
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - FidelitasComunica - <a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+    <footer>
+        <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <a href="" class="navbar-brand">
+                        <h1 class="text-primary"><span class="text-white">Fidélitas Comunica</span></h1>
+                    </a>
+                    <p>Tu sueño, nuestro destino: Viajes hechos realidad con pasión y experiencia. Te ayudamos a planificar tu viaje soñado</p>
+                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Siganos en Nuestras redes sociales</h6>
+                    <div class="d-flex justify-content-start">
+                        <a class="btn btn-outline-primary btn-square mr-2" href="https://twitter.com/ufidelitas_cr"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/ufidelitas/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square mr-2" href="https://www.linkedin.com/school/universidad-fid%C3%A9litas/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/ufidelitas/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;"></h5>
+                    <p><i></i></p>
+                    <p><i></i></p>
+                    <p><i></i></p>
+
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Links sobre Nuestros Servicios</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Destino" asp-action="IndexCliente">Acerca de Nosotros</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Destino" asp-action="IndexCliente">Destinos</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Paquete" asp-action="IndexCliente">Servicios</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Paquete" asp-action="IndexCliente">Paquetes</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Destino" asp-action="IndexCliente">Guías</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Destino" asp-action="IndexCliente">Blogs</a>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactenos a traves de:</h5>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Costa Rica, San José, San pedro</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>506 2206 8600</p>
+                    <p><i class="fa fa-envelope mr-2"></i>fidelitascomunica@ufide.ac.cr</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="row">
+                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white-50">
+                        Copyright &copy; <a href="#">Dominio</a>. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

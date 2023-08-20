@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj": {}
+    "C:\\Users\\Randall\\Desktop\\JavaScript\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj": {
+    "C:\\Users\\Randall\\Desktop\\JavaScript\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
+        "projectUniqueName": "C:\\Users\\Randall\\Desktop\\JavaScript\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
         "projectName": "FidelitasComunica",
-        "projectPath": "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documentos\\GitHub\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\obj\\",
+        "projectPath": "C:\\Users\\Randall\\Desktop\\JavaScript\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\FidelitasComunica.csproj",
+        "packagesPath": "C:\\Users\\Randall\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Randall\\Desktop\\JavaScript\\PrograWebAvanzada\\FidelitasComunica\\FidelitasComunica\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Randall\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -84,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
